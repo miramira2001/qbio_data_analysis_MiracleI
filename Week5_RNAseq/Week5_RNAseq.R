@@ -1,6 +1,8 @@
 if(!require(TCGAbiolinks)) BiocManager::install("TCGAbiolinks")
+BiocManager::install("DESeq2")
 library(TCGAbiolinks)
 library(SummarizedExperiment)
+library("DESeq2")
 query <- GDCquery(project = "TCGA-COAD", 
                   data.category = "Transcriptome Profiling", # get the RNA-seq transcriptome
                   data.type = "Gene Expression Quantification", # gets the counts
